@@ -80,6 +80,7 @@ class _TermsState extends State<Terms> {
                       //   AppConstant.name = nameC.text;
                       // Get.to(const RegistrationCompleteScreen());
                       // }
+                      Get.back();
                     },
                     child: Container(
                       height: 35.h,

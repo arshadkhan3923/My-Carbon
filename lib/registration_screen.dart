@@ -220,13 +220,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       controller: nameC,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'Please enter a Email ';
+                          return 'Please enter a Name ';
                         }
                         return null;
                       },
 
                       decoration: InputDecoration(
-                        hintText: 'Enter your Email ',
+                        hintText: 'Enter your Name ',
                         errorStyle: TextStyle(color: Colors.red),
                         hintStyle: TextStyle(
                           color: Colors.black.withOpacity(0.3799999952316284),
@@ -315,11 +315,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     InkWell(
                       child: InkWell(
                         onTap: () {
-                          // if (_formKey.currentState!.validate()) {
-                          //   AppConstant.email = emailC.text;
-                          //   AppConstant.name = nameC.text;
-                          Get.to(const RegistrationCompleteScreen());
-                          // }
+                          if (_formKey.currentState!.validate()) {
+                            AppConstant.email = emailC.text;
+                            AppConstant.name = nameC.text;
+                            Get.to(const RegistrationCompleteScreen());
+                          }
                         },
                         child: Container(
                           height: 35.h,

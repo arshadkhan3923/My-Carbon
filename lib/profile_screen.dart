@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mycarbon/reward_screen.dart';
 import 'package:mycarbon/t&c.dart';
 
 import 'ConstantValues.dart';
@@ -42,36 +43,50 @@ class ProfileScreen extends StatelessWidget {
             shrinkWrap: true,
             itemCount: 5,
             itemBuilder: (context, index) {
-              return Column(
-                children: [
-                  Container(
-                      margin: EdgeInsets.only(bottom: 0),
-                      width: double.infinity,
-                      color: Colors.white,
-                      child: Column(
-                        children: [
-                          ListTile(
-                            leading: Image.asset(
-                              image[index],
-                              height: 40.0,
-                              width: 40.0,
-                            ),
-                            title: Text(
-                              items[index],
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18.0,
-                                color: Colors.black,
+              return InkWell(
+                onTap: () {
+                  if (index == 1) {
+                    // Navigate to a new screen when the item at index 2 is tapped
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            RewardScreen(), // Replace with your desired screen
+                      ),
+                    );
+                  }
+                },
+                child: Column(
+                  children: [
+                    Container(
+                        margin: EdgeInsets.only(bottom: 0),
+                        width: double.infinity,
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            ListTile(
+                              leading: Image.asset(
+                                image[index],
+                                height: 40.0,
+                                width: 40.0,
+                              ),
+                              title: Text(
+                                items[index],
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18.0,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                          ),
-                          Divider(
-                            thickness: 2,
-                            color: Colors.black38,
-                          ),
-                        ],
-                      )),
-                ],
+                            Divider(
+                              thickness: 2,
+                              color: Colors.black38,
+                            ),
+                          ],
+                        )),
+                  ],
+                ),
               );
             },
           ),
@@ -164,9 +179,26 @@ class ProfileScreen extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Text('Cancel',
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w400)),
+              child: Container(
+                height: 35.h,
+                width: 100.w,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.black45,
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 5),
+                        blurRadius: 4,
+                        blurStyle: BlurStyle.normal),
+                  ],
+                ),
+                child: Center(
+                  child: Text('Cancel',
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.w400)),
+                ),
+              ),
             ),
             SizedBox(
               width: 10.w,
@@ -179,9 +211,26 @@ class ProfileScreen extends StatelessWidget {
                 AppConstant.gender = "";
                 Get.offAll(LoginScreen());
               },
-              child: Text('Confirm',
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w400)),
+              child: Container(
+                height: 35.h,
+                width: 100.w,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.lightGreen,
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 5),
+                        blurRadius: 4,
+                        blurStyle: BlurStyle.normal),
+                  ],
+                ),
+                child: Center(
+                  child: Text('Confirm',
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.w400)),
+                ),
+              ),
             ),
             SizedBox(
               width: 10.w,

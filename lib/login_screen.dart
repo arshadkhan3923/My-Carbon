@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mycarbon/botm_navigation__bar_flutter.dart';
-import 'package:mycarbon/term_and_condition.dart';
+import 'package:mycarbon/registration_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({super.key});
@@ -223,10 +223,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           //   if (AppConstant.email == emailC.text &&
                           //       AppConstant.password == passwordC.text) {
                           Get.offAll(AppNavigationBar());
-                          // } else {
-                          //   Get.snackbar(
-                          //       'Error', 'Kindly check your Credentials');
-                          // }
+                          //   }
+                          //   else {
+                          //     Get.snackbar(
+                          //         'Error', 'Kindly check your Credentials');
+                          //   }
                           // }
                         },
                         child: Container(
@@ -261,7 +262,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: InkWell(
                         child: InkWell(
                             onTap: () {
-                              Get.to(TermAndCondition());
+                              Get.to(RegistrationScreen());
                             },
                             child: Container(
                               height: 40.0,
