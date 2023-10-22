@@ -70,7 +70,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 10.h,
                 ),
                 Container(
-                  height: 45.0,
+                  height: 60.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -129,7 +129,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 10.h,
                 ),
                 Container(
-                  height: 45.0,
+                  height: 60.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -202,7 +202,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 15.h,
                 ),
                 Container(
-                  height: 45.0,
+                  height: 60.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,

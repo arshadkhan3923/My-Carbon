@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 15.h,
                     ),
                     Container(
-                      height: 40.0,
+                      height: 50.0,
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 15.h,
                     ),
                     Container(
-                      height: 40.0,
+                      height: 50.0,
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.white,
