@@ -47,6 +47,11 @@ class RegistrationCompleteScreen extends StatelessWidget {
                   Get.to(LoginScreen());
                   // }
                 },
+
+                ///
+                /// /
+                ///
+                ///
                 child: Container(
                   height: 35.h,
                   width: 150.w,
