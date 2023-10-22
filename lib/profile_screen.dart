@@ -225,6 +225,9 @@ class ProfileScreen extends StatelessWidget {
                         blurStyle: BlurStyle.normal),
                   ],
                 ),
+                //
+                ///
+                /// //
                 child: Center(
                   child: Text('Confirm',
                       style: TextStyle(
