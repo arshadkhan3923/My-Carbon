@@ -34,17 +34,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   TextEditingController passwordC = TextEditingController();
 
-  //
-  //
-  ///
-  /// ///
-  /// ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
   @override
   Widget build(BuildContext context) {
     return Scaffold(

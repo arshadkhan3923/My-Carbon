@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mycarbon/ConstantValues.dart';
 
+import 'botm_navigation__bar_flutter.dart';
+
 class Terms extends StatefulWidget {
   Terms({super.key});
 
@@ -80,7 +82,7 @@ class _TermsState extends State<Terms> {
                       //   AppConstant.name = nameC.text;
                       // Get.to(const RegistrationCompleteScreen());
                       // }
-                      Get.back();
+                      Get.to(const AppNavigationBar());
                     },
                     child: Container(
                       height: 35.h,
